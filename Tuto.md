@@ -49,11 +49,11 @@ Open tracing is that simple way to trace all the requests that your programs doe
 
 It can run in many different systems and is really easy to install !
 
-## Installation 
+### Installation 
 
 The way to install open-tracing is different depending on what is running on :
 
-### Back : 
+#### Back : 
 
 We had to add the corresponding dependency on the pom.xml file :
 ```
@@ -70,11 +70,11 @@ quarkus.jaeger.sampler-param=1
 quarkus.log.console.format=%d{HH:mm:ss} %-5p traceId=%X{traceId}, parentId=%X{parentId}, spanId=%X{spanId}, sampled=%X{sampled} [%c{2.}] (%t) %s%e%n  
 ```
 
-### Front : 
+#### Front : 
 
 We didn't manage to finish that part so to be able to track the front part, you'll need to install it own your own by following this tutorial https://github.com/jaegertracing/jaeger-client-node
 
-### OpenTracing Interface : 
+#### OpenTracing Interface : 
 
 Once all your app are started, you can launch the open-tracing container using the command :
 ``` 
@@ -83,7 +83,7 @@ docker run -p 5775:5775/udp -p 6831:6831/udp -p 6832:6832/udp -p 5778:5778 -p 16
 
 ## Usage
 
-Once the installation is done you just have to go to localhost:16686 and you can trace as u want your application service by service.
+Once the installation is done you just have to go to http://localhost:16686 and you can trace as u want your application service by service.
 
 # What's next ?
 
